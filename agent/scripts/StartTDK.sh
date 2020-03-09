@@ -34,7 +34,7 @@ echo "Going to start Agent"
 cd $TDK_BIN_PATH/
 ./rdk_tdk_agent_process &
 sleep 5
-status=`ps | grep tdk_agent | grep -v grep`
+status=`ps -ef | grep tdk_agent | grep -v grep`
 if [  "$status" ];
 then
     echo "Starting Agent Monitor Process.."

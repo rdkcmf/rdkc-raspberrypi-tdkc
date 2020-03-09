@@ -24,7 +24,7 @@ sleep 60
 # To monitor TDK Agent process and reboot box on its crash
 while [ $loop -eq 1 ]
 do
-   status=`ps | grep tdk_agent_monitor | grep -v grep`
+   status=`ps -ef | grep tdk_agent_monitor | grep -v grep`
    if [ ! "$status" ]
    then
        echo "TDK agent monitor crashed.. Box going for Reboot.."
